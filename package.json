@@ -1,0 +1,28 @@
+{
+  "name": "spy",
+  "version": "0.0.1",
+  "description": "Custom Scrollspy with Gumshoe, Smooth Scroll and Anime.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmgonzalves/spy.git"
+  },
+  "keywords": [
+    "scrollspy",
+    "animation"
+  ],
+  "author": "lmgonzalves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmgonzalves/spy/issues"
+  },
+  "homepage": "https://github.com/lmgonzalves/spy",
+  "engine": {
+    "node": ">=0.10.22"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.1"
+  }
+}

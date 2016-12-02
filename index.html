@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/gumshoe.min.js"></script>
+    <script src="js/anime.min.js"></script>
+</head>
+<body>
+<!-- SVG icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="arrow-up" viewBox="0 0 23.252003 12.28045"><path class="icon-path" d="m0.50503 11.544 10.967-11.044 11.275 11.275"></path></symbol>
+    <symbol id="arrow-down" viewBox="0 0 23.252003 12.28045"><path class="icon-path" d="m22.747 0.73674-10.967 11.043-11.275-11.275"></path></symbol>
+</svg>
+
+<section>
+    <!-- Fixed header -->
+    <!-- The [data-gumshoe-header] attribute tell Gumshoe that automatically offset it's calculations based on the header's height -->
+    <!-- The [data-scroll-header] attribute do the same thing but for Smooth Scroll calculations -->
+    <header class="page-header" data-gumshoe-header data-scroll-header>
+        <div class="page-nav">
+            <!-- Nav and links -->
+            <!-- The [data-gumshoe] attribute indicates the navigation list that Gumshoe should watch -->
+            <nav data-gumshoe>
+                <!-- Turn anchor links into Smooth Scroll links by adding the [data-scroll] data attribute -->
+                <a data-scroll href="#eenie">Eenie</a>
+                <a data-scroll href="#meanie">Meanie</a>
+                <a data-scroll href="#minnie">Minnie</a>
+                <a data-scroll href="#moe">Moe</a>
+            </nav>
+            <!-- Arrows -->
+            <a class="nav-arrow nav-arrow-left"><svg class="icon"><use xlink:href="#arrow-up"/></svg></a>
+            <a class="nav-arrow nav-arrow-right"><svg class="icon"><use xlink:href="#arrow-down"/></svg></a>
+        </div>
+    </header>
+    <!-- Page content -->
+    <main class="page-content">
+        <section>
+            <h2 id="eenie"><a data-scroll href="#eenie">Eenie</a></h2>
+            <p>Lorem ipsum dolor sit amet, has dico eligendi ut. Dolore suscipit mei eu, an esse erant graeco duo. Mollis scripserit definitiones sea id, id eam graecis similique adversarium. Sea inani commodo cotidieque ad, exerci inciderint contentiones vel ut, ut vim sonet tacimates petentium. Ut constituto dissentiunt mea, mel te tota alienum assentior.</p>
+            <p>Eu vocibus percipit deserunt pri, sit an denique dissentiunt, autem postulant interpretaris vim ea. Ne melius lucilius vis. No qui illud noster. Ne brute tempor scripta mel, postea recusabo eu vim. Cu animal consequat theophrastus qui, sit in oratio corpora. Ei persius maluisset pri.</p>
+
+            <h2 id="meanie"><a data-scroll href="#meanie">Meanie</a></h2>
+            <p>Qui mazim latine omittantur ei, est duis rebum ex. Eum an enim viderer reformidans. Nam eu sale saperet quaestio, id atqui voluptua vix. Ei mel dicit iisque abhorreant, nam ut nibh persecuti. No eam solum quando neglegentur. Ius convenire maiestatis at.</p>
+            <p>Ne pro diam delicata, inani erant iudicabit id sea. Nam atqui tantas option an, ad postea fierent mea. Quo quod postulant cu, vitae numquam civibus nec cu, sed nulla accumsan te. At ocurreret elaboraret cum. Eam cu laoreet minimum eloquentiam, vocibus inciderint eu vis, ridens pertinacia sed ei. His tacimates intellegat necessitatibus cu.</p>
+
+            <h2 id="minnie"><a data-scroll href="#minnie">Minnie</a></h2>
+            <p>Ei doctus patrioque ius, movet saepe utinam eu ius. Voluptua intellegebat quo at, nec no alii novum vivendo, ubique imperdiet omittantur eum ea. Putent maluisset ut mei, id nemore apeirian pri, alia persius partiendo ne has. Vide ridens lobortis et mei, stet nostrum eos ad. No eam ullum insolens, et per unum luptatum dissentiunt. Ut unum sapientem vel, no mei periculis scribentur, no nam volumus fierent. Eam veri voluptua scribentur ea.</p>
+
+            <h2 id="moe"><a data-scroll href="#moe">Moe</a></h2>
+            <p>Eius suscipit eu his, sit graece erroribus et. Paulo tantas imperdiet has ea, regione inimicus ei nec. Meis etiam delenit id has, duo quas aeterno petentium eu. Per affert tibique ut, qui paulo dolorum in, vim et postea latine. His ne agam intellegam, usu id utroque vivendo splendide.</p>
+            <p>Admodum insolens mea at, ex accusam scribentur vim, vis cu invenire quaestio. Pro eu cibo repudiandae, ad pri tibique corpora mnesarchum, eu vocibus omittantur duo. Ex pri similique democritum suscipiantur, at mel lorem graeci deserunt. Has iudico verear detraxit eu, cum odio admodum erroribus in.</p>
+            <p>Cum in veri ullum. Eam luptatum temporibus at. In pri albucius consetetur, pri ut liber doctus instructior. Definiebas ullamcorper per eu.</p>
+            <p>At mea noster everti referrentur. Adhuc utamur dolorem at vix, cu aliquam lucilius pro, malorum eruditi ut qui. Agam mucius audiam sit ei. Ad eleifend posidonium sit, duo elit probatus et, vel ei facete aeterno facilisis. Autem quaestio sadipscing qui ex.</p>
+            <p>His iuvaret denique dolores te. Ferri timeam no mel, cum latine regione senserit ea, nec rebum ludus ea. Ut movet detraxit vix, mei tamquam maluisset te. Te option epicurei vel, sea alii probatus accommodare ad.</p>
+        </section>
+    </main>
+</section>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

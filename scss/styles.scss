@@ -1,0 +1,210 @@
+/* General styles */
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  /* This is to solve the headbutting/padding issue. Read more: https://css-tricks.com/hash-tag-links-padding/ */
+  /* 110px = 80px (fixed header) + 30px (additional margin) */
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: -110px;
+    height: 110px;
+    visibility: hidden;
+  }
+
+  font-size: 24px;
+  margin: 50px 0;
+  border-bottom: 1px solid #427BAB;
+
+  a {
+    display: inline-block;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #427BAB;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.icon-path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page-content {
+  display: inline-block; /* This is for clearing purpose. */
+  margin: 80px 50px 30px; /* Margin top = 80px because of fixed header */
+
+  /* Linear gradients to hide and show the content smoothly on scroll (as opacity transition) */
+
+  &:before, &:after {
+    position: fixed;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 30px;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &:before {
+    top: 80px;
+    background-image: linear-gradient(#fff, rgba(#fff, 0));
+  }
+
+  &:after {
+    bottom: 0;
+    background-image: linear-gradient(rgba(#fff, 0), #fff);
+  }
+}
+
+/* Fixed header */
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* The height of fixed header */
+  background-color: #2D353F;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Nav container */
+
+.page-nav {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  height: 40px; /* This is the same height of each link */
+  width: 400px;
+  max-width: 100%; /* Responsive behavior */
+  overflow: hidden; /* Only current link visible */
+  background-color: #427BAB;
+
+  &.nav-open {
+
+    &:before, &:after {
+      opacity: 0;
+      transition: 0s 0s;
+    }
+
+    nav a {
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .nav-arrow {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  /* Subtle linear gradients for swapping links smoothly (as opacity transition) */
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 30%;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    transition: 0s 0.5s;
+  }
+
+  &:before {
+    top: 0;
+    background-image: linear-gradient(#427BAB, rgba(#427BAB, 0));
+  }
+
+  &:after {
+    bottom: 0;
+    background-image: linear-gradient(rgba(#427BAB, 0), #427BAB);
+  }
+}
+
+/* Nav and links */
+
+nav {
+  position: relative;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+
+  a {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+  }
+}
+
+/* Arrows */
+
+.nav-arrow {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 40px;
+  z-index: 2;
+  transition: 0.3s opacity;
+  outline: none;
+
+  &.nav-arrow-left {
+    left: 0;
+  }
+
+  &.nav-arrow-right {
+    right: 0;
+  }
+
+  &.nav-arrow-disabled {
+    opacity: 0.2;
+  }
+
+  &:not(.nav-arrow-disabled) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
