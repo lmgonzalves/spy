@@ -4,4 +4,4 @@ Custom Scrollspy with [Gumshoe](https://github.com/cferdinandi/gumshoe), [Smooth
 
 [**DEMO**](http://lmgonzalves.github.io/spy/)
 
-[**TUTORIAL**](https://scotch.io/tutorials/build-a-custom-javascript-scrollspy-navigation)
+[**TUTORIAL**](https://www.digitalocean.com/community/tutorials/build-a-custom-javascript-scrollspy-navigation)
